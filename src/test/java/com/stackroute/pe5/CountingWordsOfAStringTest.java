@@ -35,13 +35,18 @@ public class CountingWordsOfAStringTest {
     {
 //        act
         String input= "one one-one___two,,three,one @three*one?two";
-        Map<Integer,String> expectedResult= new HashMap<Integer, String>();
-        expectedResult.put(5,"one");
-        expectedResult.put(2,"two");
-        expectedResult.put(2,"three");
+        HashMap<String,Integer> expectedResult= new HashMap<String, Integer>();
+        expectedResult.put("one",5);
+        expectedResult.put("two",2);
+        expectedResult.put("three",2);
         Map actualResult=countingWordsOfAString.numberOfOccurrenceOfAWord(input);
 //        assert
         assertEquals(expectedResult,actualResult);
+    }
+    @Test(expected = NullPointerException.class)
+    public void givenEmptyStringShouldReturnNullPointerException()
+    {
+        this.countingWordsOfAString.numberOfOccurrenceOfAWord(null);
     }
 
 }
