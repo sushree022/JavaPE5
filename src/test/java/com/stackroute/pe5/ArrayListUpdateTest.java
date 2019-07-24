@@ -30,37 +30,35 @@ public class ArrayListUpdateTest {
     }
 
     @Test
-    public void givenStringShouldReplaceArrayElementOfAnArrayList()
-    {
+    public void givenStringShouldReplaceArrayElementOfAnArrayList() {
 //        act
-        ArrayList<String> fruitList= new ArrayList<String>();
+        ArrayList<String> fruitList = new ArrayList<String>();
         fruitList.add("Apple");
         fruitList.add("Grape");
         fruitList.add("Melon");
         fruitList.add("Berry");
-        ArrayList<String> expectedResult= new ArrayList<String>();
+        ArrayList<String> expectedResult = new ArrayList<String>();
         expectedResult.add("Kiwi");
         expectedResult.add("Grape");
         expectedResult.add("Melon");
         expectedResult.add("Berry");
 //        assert
-        ArrayList actualResult=arrayListUpdate.updateArrayList(fruitList,"Apple", "Kiwi");
-        assertEquals(expectedResult,actualResult);
+        ArrayList actualResult = arrayListUpdate.updateArrayList(fruitList, "Apple", "Kiwi");
+        assertEquals(expectedResult, actualResult);
     }
 
-    
+
     @Test
-    public void givenArrayListShouldReturnEmptyArrayList()
-    {
+    public void givenArrayListShouldReturnEmptyArrayList() {
         //        act
-        ArrayList<String> fruitList= new ArrayList<String>();
+        ArrayList<String> fruitList = new ArrayList<String>();
         fruitList.add("Apple");
         fruitList.add("Grape");
         fruitList.add("Melon");
         fruitList.add("Berry");
-        ArrayList<String> expectedResult= new ArrayList<String>();
+        ArrayList<String> expectedResult = new ArrayList<String>();
 //        assert
-        ArrayList actualResult=arrayListUpdate.clearArrayList(fruitList);
-        assertEquals(expectedResult,actualResult);
+        ArrayList actualResult = arrayListUpdate.clearArrayList(fruitList);
+        assertEquals(expectedResult, actualResult);
     }
 }
