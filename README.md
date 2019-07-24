@@ -11,6 +11,9 @@ Description- There are 6 problems for which test cases are written and then logi
 		In a given string, count the number of occurrence of each word and print it using hash map.
 
 3. CheckingRepeatWordsInArray-
-		An array of strings is given. Have to count the number of occurrence of each word. If number of occurrence is more than 2, return boolean true else false.
+		A string is given. Have to count the number of occurrence of each word. If number of occurrence is more than 2, return boolean true else false.
+
+4. SortNames-
+		A string of names are given, those are sorted using sort set and then it get converted in to array list.
 
 

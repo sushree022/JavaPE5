@@ -61,4 +61,11 @@ public class ArrayListUpdateTest {
         ArrayList actualResult = arrayListUpdate.clearArrayList(fruitList);
         assertEquals(expectedResult, actualResult);
     }
+
+
+    @Test(expected = NullPointerException.class)
+    public void givenEmptyArrayListShouldReturnNullPointerException() {
+        this.arrayListUpdate.clearArrayList(null);
+    }
+
 }
