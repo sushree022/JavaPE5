@@ -31,21 +31,20 @@ public class CountingWordsOfAStringTest {
     }
 
     @Test
-    public void givenStringShouldReturnAMapList()
-    {
+    public void givenStringShouldReturnAMapList() {
 //        act
-        String input= "one one-one___two,,three,one @three*one?two";
-        HashMap<String,Integer> expectedResult= new HashMap<String, Integer>();
-        expectedResult.put("one",5);
-        expectedResult.put("two",2);
-        expectedResult.put("three",2);
-        Map actualResult=countingWordsOfAString.numberOfOccurrenceOfAWord(input);
+        String input = "one one-one___two,,three,one @three*one?two";
+        HashMap<String, Integer> expectedResult = new HashMap<String, Integer>();
+        expectedResult.put("one", 5);
+        expectedResult.put("two", 2);
+        expectedResult.put("three", 2);
+        Map actualResult = countingWordsOfAString.numberOfOccurrenceOfAWord(input);
 //        assert
-        assertEquals(expectedResult,actualResult);
+        assertEquals(expectedResult, actualResult);
     }
+
     @Test(expected = NullPointerException.class)
-    public void givenEmptyStringShouldReturnNullPointerException()
-    {
+    public void givenEmptyStringShouldReturnNullPointerException() {
         this.countingWordsOfAString.numberOfOccurrenceOfAWord(null);
     }
 

@@ -33,13 +33,17 @@ public class CheckingRepeatWordsInArrayTest {
     public void givenArrayOfStringsShouldReturnMap() {
 
         Map<String, Boolean> expectedResult = new HashMap<String, Boolean>();
-        String[] input = {"a", "b", "c", "d", "a", "c", "c"};
+        String input = "a, b, c, d, a, c, c";
         Map actualResult = checkingRepeatWordsInArray.repeatWordChecking(input);
         expectedResult.put("a", true);
         expectedResult.put("b", false);
         expectedResult.put("c", true);
         expectedResult.put("d", false);
         assertEquals(expectedResult, actualResult);
+    }
 
+    @Test(expected = NullPointerException.class)
+    public void givenEmptyStringShouldReturnNullPointerException() {
+        this.checkingRepeatWordsInArray.repeatWordChecking(null);
     }
 }
