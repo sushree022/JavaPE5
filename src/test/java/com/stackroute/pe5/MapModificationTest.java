@@ -30,6 +30,7 @@ public class MapModificationTest {
 
     @Test
     public void givenMapShouldReturnModifiedMap() {
+//        act
         HashMap<String, String> input = new HashMap<String, String>();
         input.put("val1", "java");
         input.put("val2", "c++");
@@ -38,7 +39,26 @@ public class MapModificationTest {
         HashMap<String, String> expectedResult = new HashMap<String, String>();
         expectedResult.put("val1", " ");
         expectedResult.put("val2", "java");
+//        assert
+        assertEquals(expectedResult, actualResult);
+    }
 
+    @Test
+    public void givenMapOfFourElementsShouldReturnModifiedMap() {
+//        act
+        HashMap<String, String> input = new HashMap<String, String>();
+        input.put("val1", "Bhubaneswar");
+        input.put("val2", "Bengaluru");
+        input.put("val3", "Chennai");
+        input.put("val4", "Delhi");
+        HashMap<String, String> actualResult = new HashMap<String, String>();
+        actualResult = mapModification.map2ValueModified(input);
+        HashMap<String, String> expectedResult = new HashMap<String, String>();
+        expectedResult.put("val1", " ");
+        expectedResult.put("val2", "Bhubaneswar");
+        expectedResult.put("val3", "Bengaluru");
+        expectedResult.put("val4", "Chennai");
+//        assert
         assertEquals(expectedResult, actualResult);
     }
 }
