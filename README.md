@@ -20,6 +20,6 @@ Description- There are 6 problems for which test cases are written and then logi
 		In a given map the value of 1st is assigned to second and so on. The value of 1st is an empty string.
 
 6. StudentInformation-
-		getter and setter are implemented. Create a `StudentSorter` class that implements `Comparator interface` . Write a class `Maintest` create Student class object(minimum 5). Add these student object into a List of type Student . Sort the list based on their age in decreasing order, for student having same age, sort based on their name.For students having same name and age, sort them according to their ID.
+		getter and setter are implemented. A `StudentSorter` class is created that implements `Comparator interface` . A class `Maintest` is created. 5 student objects are added into a List of type Student . The list sorted based on their age in decreasing order, for student having same age, are sorted based on their name.For students having same name and age, are sorted according to their ID.
 
 
